@@ -1,6 +1,6 @@
 .vscode/
 venv/
 __pycache__/
-config.json
+config.dummy.json
 *.pem
 current.vms
