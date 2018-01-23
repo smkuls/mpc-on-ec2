@@ -1,6 +1,6 @@
 # viff-on-ec2
 
-This clones the asyncmix branch from the repo - https://github.com/amiller/viff/
+This clones the asyncmix branch from the repo - https://github.com/amiller/viff/ on each of the VMs.
 
 ## Dependencies:
 * pip install boto3
