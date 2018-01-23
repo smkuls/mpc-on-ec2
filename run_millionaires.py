@@ -25,11 +25,6 @@ ec2Manager = EC2Manager()
 
 instance_ids, instance_ips = ec2Manager.create_instances()
 
-# instance_ids = ['i-0d84e2917acb29b3c', 'i-0f13caa0b8003ff4a', 'i-044430258e0d9c0fc']
-# instance_ips = ['52.90.110.187', '54.158.52.208', '54.226.185.62']
-
-# print(instance_ips)
-# print(instance_ids)
 run_viff_millionaires(instance_ids, instance_ips)
 time.sleep(2)
 display_output(instance_ids)
