@@ -20,3 +20,5 @@ class AwsConfig:
         self.KEY_FILE_PATH = config["key_file_path"]
         self.SETUP_SCRIPT_PATH = config["setup_script_path"]
         self.INSTANCE_USER_NAME = config["instance_user_name"]
+        self.VIFF_APP_NAME = config["viff_app_name"]
+        self.SLEEP_TIMEOUT_IN_SECONDS = config["sleep_timeout_in_seconds"]

@@ -35,7 +35,7 @@ class EC2Manager:
 
     def create_instances(self):
         if os.path.isfile(EC2Manager.current_vms_file_name):
-            print ("Picking up VMs from current.vms file.")
+            print (">>> Picking up VMs from current.vms file.")
             instance_ids = self.get_current_vm_details()
         else:
             instances = self.ec2.create_instances(
@@ -78,8 +78,9 @@ class EC2Manager:
             print(instance.id, instance.state, instance.tags, instance.public_ip_address)
 
     def terminate_instances_by_name(self):
-        self.ec2.instances.filter(Filters=[{'Name': 'tag:' + "Name", 'Values': [self.config.VM_NAME]}]).terminate()
-    
+        self.ec2.instances.filter(Filters=[{'Name': 'tag:' + "Name",
+            'Values': [self.config.VM_NAME]}]).terminate()
+
     def terminate_instances_by_id(self):
         instance_ids = self.get_current_vm_details()
         self.ec2.instances.filter(InstanceIds=instance_ids).terminate()
@@ -102,16 +103,19 @@ class EC2Manager:
                 output = stdout.read()
                 if display_output and len(output) != 0:
                     print()
-                    print("########################### " + "OUTPUT FROM: " + instance_id + " ####################################")
+                    print("########################### " + "OUTPUT FROM: " + instance_id + " ###" \
+                        "#################################")
                     print(output.decode('utf-8'))
-                    print("#################################################################################################")
+                    print("######################################################################" \
+                        "###########################")
                 err = stderr.read()
                 if len(err) != 0:
                     print()
-                    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ " + "ERROR WHILE EXECUTING COMMAND ON: " + instance_id + " ~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ " + "ERROR WHILE EXECUTING COMMAND ON: " +
+                        instance_id + " ~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                     print(err.decode('utf-8'))
-                    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-
+                    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" \
+                        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
             ssh_client.close()
 
