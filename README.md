@@ -1,5 +1,7 @@
 # viff-on-ec2
 
+This clones the asyncmix branch from the repo - https://github.com/amiller/viff/
+
 ## Dependencies:
 * pip install boto3
 * pip install paramiko
