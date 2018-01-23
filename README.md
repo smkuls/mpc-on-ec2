@@ -1,4 +1,4 @@
-# ec2runner
+# viff-on-ec2
 
 ## Dependencies:
 * pip install boto3
