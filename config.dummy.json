@@ -1,0 +1,15 @@
+{
+    "access_key_id": "",
+    "secret_access_key": "",
+    "region": "us-east-1",
+    "key_file_path": "aws-samarth.pem",
+    "setup_script_path": "setup.sh",
+    
+    "vm_count": 3,
+    "vm_name": "samarth",
+    
+    "instance_type": "t2.micro",
+    "image_id": "ami-97785bed",
+    "security_group_ids": ["sg-0faaf975"],
+    "key_name": "aws-samarth"    
+}
