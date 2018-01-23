@@ -19,3 +19,4 @@ class AwsConfig:
         self.VM_NAME = config["vm_name"]
         self.KEY_FILE_PATH = config["key_file_path"]
         self.SETUP_SCRIPT_PATH = config["setup_script_path"]
+        self.INSTANCE_USER_NAME = config["instance_user_name"]

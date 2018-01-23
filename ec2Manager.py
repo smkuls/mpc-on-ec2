@@ -96,7 +96,7 @@ class EC2Manager:
         instance_ip = self.get_instance_public_ip(instance_id)
 
         try:
-            ssh_client.connect(hostname=instance_ip, username="ec2-user", pkey=key)
+            ssh_client.connect(hostname=instance_ip, username=self.config.INSTANCE_USER_NAME, pkey=key)
             for command in commands:
                 stdin, stdout, stderr = ssh_client.exec_command(command)
                 output = stdout.read()
