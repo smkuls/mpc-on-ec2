@@ -13,8 +13,8 @@ Note: Make sure that you install these packages for the correct python version.
 1. Modify the 'config.json' as follows:
     * Specify the MPC framework you want to run against the 'mpc_framework' key. Must be either 'viff' or 'spdz'.
     * Specify the MPC application which you want to run against the key 'mpc_app_name'.
-        Viff: This application must be present in viff/apps directory.
-        SPDZ-2: Specify the relative path from the root directory of the repository.
+        * Viff: This application must be present in viff/apps directory.
+        * SPDZ-2: Specify the relative path from the root directory of the repository.
     * Add 'access_key_id' and 'secret_access_key'.
     * Specify the path to the .pem file to access the VMs in 'key_file_path'. This .pem file should correspond to the 'key_name' which must exist in AWS.
     * Update the 'vm_count' and 'vm_name' (give a unique name so it is identifiable on the console easily, all VMs will have the same name) accordingly.
