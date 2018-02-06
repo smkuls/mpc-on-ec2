@@ -1,5 +1,6 @@
 {
-    "viff_app_name": "millionaires.py",
+    "mpc_framework": "viff",
+    "mpc_app_name": "millionaires.py",
 
     "access_key_id": "",
     "secret_access_key": "",
@@ -7,10 +8,9 @@
     "vm_count": 3,
     "vm_name": "samarth",
 
-    "key_file_path": "aws-samarth.pem",
-    "key_name": "aws-samarth",
+    "key_file_path": "aws-samarth-uiuc.pem",
+    "key_name": "aws-samarth-uiuc",
     
-    "setup_script_path": "setup.sh",
     "sleep_timeout_in_seconds" : 5,
 
     "region": "us-east-1",

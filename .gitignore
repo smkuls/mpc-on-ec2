@@ -4,3 +4,9 @@ __pycache__/
 config.dummy.json
 *.pem
 current.vms
+*~
+viff-on-ec2/
+.downloaded/
+error-i-0*
+output-i-0*
+*.pyc

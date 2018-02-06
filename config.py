@@ -1,5 +1,5 @@
 import json
-from pprint import pprint
+
 
 class AwsConfig:
 
@@ -7,7 +7,8 @@ class AwsConfig:
         self.__load()
 
     def __load(self):
-        config = json.load(open('config.json'))
+        config = json.load(open('config.dummy.json'))
+        self.MPC_FRAMEWORK = config["mpc_framework"]
         self.ACCESS_KEY_ID = config["access_key_id"]
         self.SECRET_ACCESS_KEY = config["secret_access_key"]
         self.REGION = config["region"]
@@ -18,7 +19,6 @@ class AwsConfig:
         self.INSTANCE_TYPE = config["instance_type"]
         self.VM_NAME = config["vm_name"]
         self.KEY_FILE_PATH = config["key_file_path"]
-        self.SETUP_SCRIPT_PATH = config["setup_script_path"]
         self.INSTANCE_USER_NAME = config["instance_user_name"]
-        self.VIFF_APP_NAME = config["viff_app_name"]
+        self.MPC_APP_NAME = config["mpc_app_name"]
         self.SLEEP_TIMEOUT_IN_SECONDS = config["sleep_timeout_in_seconds"]

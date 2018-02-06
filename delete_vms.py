@@ -3,7 +3,8 @@ from ec2Manager import EC2Manager
 
 ec2_manager = EC2Manager()
 
-print("Do you want to terminate all VMs with the ids:", ec2_manager.get_current_vm_details(), "(y/n)?")
+print("Do you want to terminate all VMs with the ids:",
+        ec2_manager.get_current_vm_details(), "(y/n)?")
 
 while True:
     choice = input()
