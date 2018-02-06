@@ -7,7 +7,7 @@ class AwsConfig:
         self.__load()
 
     def __load(self):
-        config = json.load(open('config.dummy.json'))
+        config = json.load(open('config.json'))
         self.MPC_FRAMEWORK = config["mpc_framework"]
         self.ACCESS_KEY_ID = config["access_key_id"]
         self.SECRET_ACCESS_KEY = config["secret_access_key"]
